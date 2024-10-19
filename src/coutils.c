@@ -96,22 +96,3 @@ char* reverse_string(char subject[]){
     }
     return result;
 }
-
-/*
-hello
-length = 5
-h = 0
-e = 1
-l = 2
-l = 3
-o = 4
-o = strlen - 1
-e = strlen - 2
-l = strlen - 3
-l = strlen - 4
-h = strlen = 5
-
-0 = strlen - strlen
-1 = strlen - (strlen - 1)
-
-*/
