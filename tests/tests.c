@@ -16,6 +16,7 @@ int main(){
 		int is_num_sequnece_false = is_num_sequence("1234ABC");
     int is_equal_true = strcomp("hello", "hello");
     int is_equal_false = strcomp("hello", "Hello");
+		const char* reversed = reverse_string("hello");
     if (strlen_test == 5 &&
         power_test == 8 &&
         is_equal_false == 1 &&
@@ -31,6 +32,6 @@ int main(){
     else {
       printf("%d\n", result);
     }
-    //const char* my_pow = reverse_string("hello");
+		printf("%s\n", reversed);
     return result;
 }

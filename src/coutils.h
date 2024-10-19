@@ -12,6 +12,6 @@ int c_strlen(char subject[]);
 int is_num_sequence(char subject[]);
 int power(int base, int exponent);
 int strcomp(char one[], char two[]);
-//const char* reverse_string(char subject[]);
+char* reverse_string(char subject[]);
 
 #endif 

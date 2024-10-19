@@ -3,6 +3,7 @@ LibCoutils by Alyx Shang.
 Licensed under the FSL v1.
 */
 
+#include <stdlib.h>
 #include "coutils.h"
 
 // Checks whether the supplied
@@ -82,16 +83,35 @@ int strcomp(char one[], char two[]){
 // A string is fed into this function and the
 // the order of the string's characters is reversed.
 // This reversed string is returned.
-/*const char* reverse_string(char subject[]){
+char* reverse_string(char subject[]){
     int subject_len = c_strlen(subject);
-    char result[subject_len];
+		char * result = malloc(subject_len + 1);
     int idx = subject_len - 1;
     int res_idx = 0;
-    while (idx != 0){
-        result[res_idx] = subject[idx];
-        idx = idx - 1;
-        res_idx = res_idx + 1;
+    while (idx >= 0){
+			char to_replace = subject[idx];
+			result[res_idx] = to_replace;
+      idx = idx - 1;
+      res_idx = res_idx + 1;
     }
-    printf("%s\n", result);
-    return subject;
-}*/
+    return result;
+}
+
+/*
+hello
+length = 5
+h = 0
+e = 1
+l = 2
+l = 3
+o = 4
+o = strlen - 1
+e = strlen - 2
+l = strlen - 3
+l = strlen - 4
+h = strlen = 5
+
+0 = strlen - strlen
+1 = strlen - (strlen - 1)
+
+*/
