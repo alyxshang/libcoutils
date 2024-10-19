@@ -1,5 +1,7 @@
 # LIBCOUTILS :gear: :pick:
 
+![GitHub CI](https://github.com/alyxshang/libcoutils/actions/workflows/c.yml/badge.svg)
+
 ***A small library for C containing some utility functions. :gear: :pick:***
 
 ## ABOUT :books:
