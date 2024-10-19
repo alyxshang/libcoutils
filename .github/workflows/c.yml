@@ -14,12 +14,11 @@ jobs:
       - name: "Install build tools."
         run: |
           sudo apt-get update
-          sudo apt-get upgrade -y
           sudo apt-get install clang -y
-          sudo apt-get install build-essential
+          sudo apt-get install build-essential -y
       - name: "Run tests."
         run: |
-          make test
+          make test_unix
 
       - name: "Run a build."
         run: |
