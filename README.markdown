@@ -10,6 +10,8 @@ This repository contains the source code for a small library for the C programmi
 
 ## USAGE :hammer:
 
+### Compiling and Linking
+
 To use this library in your own C project, please follow these steps:
 
 - 1.) Clone this repository.
@@ -20,6 +22,10 @@ To use this library in your own C project, please follow these steps:
 - 6.) To compile your C project including ***LibCoutils***, run the following command: `clang main.c /path/to/coutils.{so,dll}`, where `/path/to/coutils.{so,dll}` is the path to the shared-object library of ***LibCoutils***.
 
 To run the tests, you can run either of the following two Make rules, depending on your system: `test_win` or `test_unix`.
+
+### API Documentation
+
+To understand how to use the functions this library provides, please refer to the comments and functions in the file `src/coutils.c`.
 
 ## CHANGELOG :black_nib:
 
