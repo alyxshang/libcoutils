@@ -4,7 +4,33 @@ Licensed under the FSL v1.
 */
 
 #include "coutils.h"
-#include <stdio.h>
+
+// Checks whether the supplied
+// string is an integer or not.
+int is_digit(char subject){
+	char alphabet[10] = "1234567890";
+	int result = 0;
+	for (int i = 0; i < 10; i++){
+		if (subject == alphabet[i]){}
+		else {
+			result = 1;
+		}
+	}
+	return result;
+}
+
+// Checks whether the supplied string
+// is a digit sequence or not.
+int is_num_sequence(char subject[]){
+	int result = 0;
+	for (int i = 0; i < c_strlen(subject); i++){
+		if (is_digit(subject[i]) == 0){}
+		else {
+			result = 1;
+		}
+	}
+	return result;
+}
 
 // Calculates the n-th power
 // of the supplied base and returns
