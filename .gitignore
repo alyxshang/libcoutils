@@ -1,3 +1,5 @@
 *.gch
-a.out
 .DS_Store
+*.so
+*.o
+lc-tests
