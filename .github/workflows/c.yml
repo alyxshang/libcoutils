@@ -18,6 +18,8 @@ jobs:
           sudo apt-get install build-essential -y
       - name: "Run tests."
         run: |
+          make build_unix
+          make setup_test_unix
           make test_unix
 
       - name: "Run a build."
