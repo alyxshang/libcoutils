@@ -20,7 +20,7 @@ jobs:
         run: |
           mv coutils.so tests
           cp -f src/coutils.h tests
-          ls
+          ls tests
 
       #- name: "Run tests."
       #  run: |
