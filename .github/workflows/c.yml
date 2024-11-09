@@ -16,10 +16,10 @@ jobs:
           clang --shared src/coutils.c -o coutils.so
           ls
 
-      #- name: "Move files."
-      #  run: |
-      #    mv coutils.so tests
-      #    cp -f src/coutils.h tests
+      - name: "Move files."
+        run: |
+          mv coutils.so tests
+          cp -f src/coutils.h tests
 
       #- name: "Run tests."
       #  run: |
