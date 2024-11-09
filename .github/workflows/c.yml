@@ -11,12 +11,17 @@ jobs:
           sudo apt-get update
           sudo apt-get install clang -y
           sudo apt-get install build-essential -y
+      - name: "Compile the shared-object library."
+        run: clang --shared src/coutils.c -o coutils.so
+
+      - name: "Move files."
+        run: |
+          mv coutils.so tests
+          cp -f src/coutils.h tests
+          cd tests
+
       - name: "Run tests."
         run: |
-          make build_unix
-          make setup_test_unix
-          make test_unix
-
-      - name: "Run a build."
-        run: |
-          make build_unix
+          clang tests.c coutils.h coutils.so -o tests
+          chmod a+x tests
+          ./tests
