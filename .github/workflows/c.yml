@@ -12,12 +12,12 @@ jobs:
           sudo apt-get install clang -y
           sudo apt-get install build-essential -y
 
-      - name: "Compile the shared-object library."
-        run: clang --shared src/coutils.c -o coutils.so -Wall
+      - name: "Compile the static library."
+        run: clang -c src/coutils.c -o coutils.a -Wall
 
       - name: "Move files."
         run: |
-          mv coutils.so tests
+          mv coutils.a tests
           cp -f src/coutils.h tests
 
       - name: "Run tests."
@@ -25,5 +25,5 @@ jobs:
           LD_LIBRARY_PATH=.
           cd tests
           pwd
-          clang tests.c coutils.so coutils.h
+          clang tests.c coutils.a coutils.h
           ./a.out
