@@ -13,7 +13,7 @@ jobs:
           sudo apt-get install build-essential -y
 
       - name: "Compile the static library."
-        run: clang -c src/coutils.c -o coutils.a -Wall
+        run: clang -c src/coutils.c -o coutils.a -Wall -O2 -Xlinker --strip-all
 
       - name: "Move files."
         run: |
@@ -25,7 +25,7 @@ jobs:
           LD_LIBRARY_PATH=.
           cd tests
           pwd
-          clang tests.c coutils.a coutils.h -O2
+          clang tests.c coutils.a coutils.h -O2 -Xlinker --strip-all
           ./a.out
           cd ..
       
