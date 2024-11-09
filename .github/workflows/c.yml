@@ -25,3 +25,4 @@ jobs:
           cd tests
           pwd
           clang tests.c coutils.so coutils.h
+          ./a.out
