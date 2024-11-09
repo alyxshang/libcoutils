@@ -18,10 +18,10 @@ jobs:
         run: |
           mv coutils.so tests
           cp -f src/coutils.h tests
-          cd tests
 
       - name: "Run tests."
         run: |
+          cd tests
           clang tests.c coutils.h coutils.so -o tests
           chmod a+x tests
           ./tests
