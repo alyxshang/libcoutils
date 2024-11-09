@@ -22,6 +22,7 @@ jobs:
       - name: "Run tests."
         run: |
           cd tests
-          clang tests.c coutils.h coutils.so -o tests
+          clang tests.c coutils.h coutils.so
+          mv a.out tests
           chmod a+x tests
           ./tests
