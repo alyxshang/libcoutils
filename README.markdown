@@ -6,7 +6,7 @@
 
 ## ABOUT :books:
 
-This repository contains the source code for a small library for the C programming language. This library contains a few useful and versatile utility functions. This library aims to be usable in a cross-platform way and easy to use for C developers of various skill levels.
+This repository contains the source code for a small library for the C programming language. This library contains a few useful and versatile utility functions. This library aims to be usable in a cross-platform way.
 
 ## USAGE :hammer:
 
@@ -15,13 +15,9 @@ This repository contains the source code for a small library for the C programmi
 To use this library in your own C project, please follow these steps:
 
 - 1.) Clone this repository.
-- 2.) Depending on your platform, run either of the Make rules for your system. The rule `make_win` is written for Windows and the rule `make_unix` is written for Mac OS, Linux, and similar systems.
-- 3.) These rules will both generate a shared-object library.
-- 4.) Place the generated `.so` or `.dll` file in a location convenient for your project and copy the header file ***LibCoutils*** provides in the "src" directory into the same location.
-- 5.) The functions this library provides can be brought into scope by adding the line `#include "/path/to/coutils.h"` to your C file(s), where `path/to/coutils.h` specifies the path where you copied the ***LibCoutils*** header file to.
-- 6.) To compile your C project including ***LibCoutils***, run the following command: `clang main.c /path/to/coutils.{so,dll}`, where `/path/to/coutils.{so,dll}` is the path to the shared-object library of ***LibCoutils***.
-
-To run the tests, you can run either of the following two Make rules, depending on your system: `test_win` or `test_unix`.
+- 2.) Run the following command from the root of this repository: `clang -c src/coutils.c -o coutils.a -Wall`.
+- 3.) Move the file `src/coutils.h` and the file `coutils.a` to a directory of your choosing.
+- 4.) When you compile your C project, make sure to supply each of these two files to Clang as source files.
 
 ### API Documentation
 

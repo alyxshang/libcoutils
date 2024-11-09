@@ -1,7 +1,13 @@
 on: [push]
 name: LibCoutils CI
+env:
+    NAME: "libcoutils"
+    VERSION: "0.1.0"
+    
 jobs:
+
   build_and_test:
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,7 +28,6 @@ jobs:
 
       - name: "Run tests."
         run: |
-          LD_LIBRARY_PATH=.
           cd tests
           pwd
           clang tests.c coutils.a coutils.h -O2 -Xlinker --strip-all
