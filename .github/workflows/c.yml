@@ -27,3 +27,9 @@ jobs:
           pwd
           clang tests.c coutils.a coutils.h
           ./a.out
+          cd ..
+      
+      - name: "Post-test info."
+        run: |
+          file tests/a.out
+          du -sh tests/a.out
