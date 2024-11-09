@@ -22,6 +22,7 @@ jobs:
 
       - name: "Run tests."
         run: |
+          LD_LIBRARY_PATH=.
           cd tests
           pwd
           clang tests.c coutils.so coutils.h
