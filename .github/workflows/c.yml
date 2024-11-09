@@ -25,7 +25,7 @@ jobs:
           LD_LIBRARY_PATH=.
           cd tests
           pwd
-          clang tests.c coutils.a coutils.h
+          clang tests.c coutils.a coutils.h -O2
           ./a.out
           cd ..
       
