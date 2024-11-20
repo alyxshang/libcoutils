@@ -83,14 +83,14 @@ int strcomp(char one[], char two[]){
 // A string is fed into this function and the
 // the order of the string's characters is reversed.
 // This reversed string is returned.
-char* reverse_string(char subject[]){
+char * reverse_string(char subject[]){
     int subject_len = c_strlen(subject);
-		char * result = malloc(subject_len + 1);
+    char * result = malloc(subject_len + 1);
     int idx = subject_len - 1;
     int res_idx = 0;
     while (idx >= 0){
-			char to_replace = subject[idx];
-			result[res_idx] = to_replace;
+       char to_replace = subject[idx];
+       result[res_idx] = to_replace;
       idx = idx - 1;
       res_idx = res_idx + 1;
     }
